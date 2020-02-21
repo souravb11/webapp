@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: souravbwebapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: souravbwebapp 
+    spec:
+      containers:
+        - name: souravbwebapp 
+          image: my1acr.azurecr.io/souravbwebapp
+          ports:
+          - containerPort: 5000
